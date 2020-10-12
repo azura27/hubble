@@ -36,6 +36,7 @@ func New(vp *viper.Viper) *cobra.Command {
 		},
 	}
 	configCmd.AddCommand(
+		newSetCommand(vp),
 		newViewCommand(vp),
 	)
 	return configCmd
